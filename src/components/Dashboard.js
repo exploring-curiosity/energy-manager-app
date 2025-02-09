@@ -7,6 +7,8 @@ import EWallet from './EWallet';
 import { AuthContext } from '../AuthContext';
 import { useNavigate } from 'react-router-dom';
 import '../App.css';
+import PowerMeterTab from './PowerMeterTab';
+
 
 const Dashboard = () => {
   const [tabIndex, setTabIndex] = useState(0);
@@ -29,6 +31,7 @@ const Dashboard = () => {
           <Tab className="tab">Energy Monitoring</Tab>
           <Tab className="tab">Appliance Maintenance</Tab>
           <Tab className="tab">E-Wallet</Tab>
+          <Tab className="tab">Measure</Tab>
         </TabList>
 
         <TabPanel className="tab-content">
@@ -39,6 +42,9 @@ const Dashboard = () => {
         </TabPanel>
         <TabPanel className="tab-content">
           <EWallet />
+        </TabPanel>
+        <TabPanel className="tab-content">
+          <PowerMeterTab />
         </TabPanel>
       </Tabs>
     </div>
